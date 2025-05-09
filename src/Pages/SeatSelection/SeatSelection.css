@@ -32,7 +32,12 @@
     align-items: center;
     gap: 10px;
   }
-  
+  .back-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color:#fff;
+  }
   .legend {
     display: flex;
     justify-content: space-around;

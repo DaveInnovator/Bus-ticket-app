@@ -1,15 +1,17 @@
 import React from "react";
 import "./SelectTrip.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBus, faSliders, faSortAmountDown } from "@fortawesome/free-solid-svg-icons";
+import { faBus, faSliders, faSortAmountDown, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
 const SelectTrip = () => {
   return (
     <div className="select-trip-page">
-      <div className="top-section">
+      <div className="top-section"><Link to="/home"><button>
+        <FontAwesomeIcon icon={faArrowLeft} /></button></Link>
         <div className="map-background">
           <div className="trip-info">
+          
             <span className="terminal">LAG</span>
             <FontAwesomeIcon icon={faBus} className="bus-arc" />
             <span className="terminal">ABJ</span>
@@ -53,6 +55,7 @@ const SelectTrip = () => {
       <div className="trip-card">
         <div className="card-top">
           <div className="location">
+           
             <div className="code">LAG</div>
             <div className="time">09:00AM</div>
           </div>

@@ -21,7 +21,8 @@ const SeatSelection = () => {
     <div className="seat-selection-container">
       <div className="seat-header">
         <Link to ="/select-trip">
-        <FontAwesomeIcon icon={faArrowLeft} /></Link>
+        <button className='back-btn'>
+        <FontAwesomeIcon icon={faArrowLeft} /></button></Link>
         <h2>Select Seat</h2>
       </div>
 
