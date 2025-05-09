@@ -1,0 +1,124 @@
+:root {
+    --primary-bg: #e6f0f6;
+    --header-bg: #012e57;
+    --button-bg: #0f4d7d;
+    --seat-available: #ffffff;
+    --seat-selected: #61dafb;
+    --seat-booked: #9aa5b1;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .seat-selection-container {
+    max-width: 400px;
+    margin: auto;
+    background-color: var(--primary-bg);
+    padding: 16px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    min-height: 100vh;
+  }
+  
+  .seat-header {
+    background-color: var(--header-bg);
+    color: white;
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .legend {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    font-size: 14px;
+    color: #333;
+    align-items: center;
+  }
+  
+  .legend-item {
+    width: 20px;
+    height: 20px;
+    margin-right: 4px;
+    border-radius: 4px;
+    display: inline-block;
+  }
+  
+  .available {
+    background-color: var(--seat-available);
+    border: 2px solid #ccc;
+  }
+  
+  .selected {
+    background-color: var(--seat-selected);
+  }
+  
+  .booked {
+    background-color: var(--seat-booked);
+  }
+  
+  .seats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    justify-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .seat {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: var(--seat-available);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #012e57;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: 0.2s;
+  }
+  
+  .seat.selected {
+    background-color: var(--seat-selected);
+    color: #fff;
+  }
+  
+  .seat.booked {
+    background-color: var(--seat-booked);
+    color: #fff;
+    cursor: not-allowed;
+  }
+  
+  .footer {
+    margin-top: auto;
+    padding-top: 12px;
+    text-align: center;
+  }
+  
+  .confirm-btn {
+    background-color: var(--button-bg);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .confirm-btn:hover {
+    background-color: #0d3f65;
+  }
+  

@@ -1,9 +1,9 @@
 import React from "react";
 import "./SelectTrip.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBus } from "@fortawesome/free-solid-svg-icons";
-import { Link} from "react-router-dom"
- 
+import { faBus, faSliders, faSortAmountDown } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
+
 const SelectTrip = () => {
   return (
     <div className="select-trip-page">
@@ -19,8 +19,12 @@ const SelectTrip = () => {
       </div>
 
       <div className="controls">
-        <button className="filter-btn">Filter</button>
-        <button className="sort-btn">Sort by: Quickest</button>
+        <button className="filter-btn">
+          <FontAwesomeIcon icon={faSliders} className="control-icon" /> Filter
+        </button>
+        <button className="sort-btn">
+          <FontAwesomeIcon icon={faSortAmountDown} className="control-icon" /> Sort by: Quickest
+        </button>
       </div>
 
       <div className="available-count">10 Buses Available</div>
@@ -41,7 +45,9 @@ const SelectTrip = () => {
         </div>
         <div className="operator">Peace Mass Transit</div>
         <div className="price">₦12,000 <span>Per Adult</span></div>
-       <Link to="/seat-selection"> <button className="select-seat-btn">Select Seat</button></Link>
+        <Link to="/seat-selection">
+          <button className="select-seat-btn">Select Seat</button>
+        </Link>
       </div>
 
       <div className="trip-card">
@@ -60,7 +66,9 @@ const SelectTrip = () => {
         </div>
         <div className="operator">God Is Good Motors</div>
         <div className="price">₦10,500 <span>Per Adult</span></div>
-        <Link to="/seat-selection"> <button className="select-seat-btn">Select Seat</button></Link>
+        <Link to="/seat-selection">
+          <button className="select-seat-btn">Select Seat</button>
+        </Link>
       </div>
     </div>
   );
