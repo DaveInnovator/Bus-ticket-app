@@ -1,59 +1,66 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBus, faCalendarAlt, faClock } from '@fortawesome/free-solid-svg-icons';
-import './SelectTrip.css';
-
+import React from "react";
+import "./SelectTrip.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBus } from "@fortawesome/free-solid-svg-icons";
+import { Link} from "react-router-dom"
+ 
 const SelectTrip = () => {
   return (
-    <div className="select-trip-container">
-      <header className="trip-header">
-        <div className="location-header">
-          <span className="location-code">CDG</span>
-          <FontAwesomeIcon icon={faBus} className="bus-icon" />
-          <span className="location-code">FLR</span>
+    <div className="select-trip-page">
+      <div className="top-section">
+        <div className="map-background">
+          <div className="trip-info">
+            <span className="terminal">LAG</span>
+            <FontAwesomeIcon icon={faBus} className="bus-arc" />
+            <span className="terminal">ABJ</span>
+          </div>
+          <div className="select-title">Select Trip</div>
         </div>
-        <p className="route-names">Paris → Florence</p>
-      </header>
+      </div>
 
-      <div className="filters">
-        <button className="filter-btn">
-          <FontAwesomeIcon icon={faCalendarAlt} /> Filter
-        </button>
+      <div className="controls">
+        <button className="filter-btn">Filter</button>
         <button className="sort-btn">Sort by: Quickest</button>
       </div>
 
+      <div className="available-count">10 Buses Available</div>
+
       <div className="trip-card">
-        <div className="trip-times">
-          <div className="departure">
-            <p className="time">09:30 AM</p>
-            <p className="date">Sun, 24 Jan</p>
+        <div className="card-top">
+          <div className="location">
+            <div className="code">LAG</div>
+            <div className="time">08:00AM</div>
           </div>
-          <FontAwesomeIcon icon={faBus} className="trip-bus-icon" />
-          <div className="arrival">
-            <p className="time">11:45 AM</p>
-            <p className="date">Sun, 24 Jan</p>
+          <div className="bus-line">
+            <FontAwesomeIcon icon={faBus} className="bus-icon" />
+          </div>
+          <div className="location">
+            <div className="code">ABJ</div>
+            <div className="time">03:30PM</div>
           </div>
         </div>
-        <div className="trip-price">
-          <p>$1,181</p>
-        </div>
+        <div className="operator">Peace Mass Transit</div>
+        <div className="price">₦12,000 <span>Per Adult</span></div>
+       <Link to="/seat-selection"> <button className="select-seat-btn">Select Seat</button></Link>
       </div>
 
       <div className="trip-card">
-        <div className="trip-times">
-          <div className="departure">
-            <p className="time">09:30 AM</p>
-            <p className="date">Sun, 24 Jan</p>
+        <div className="card-top">
+          <div className="location">
+            <div className="code">LAG</div>
+            <div className="time">09:00AM</div>
           </div>
-          <FontAwesomeIcon icon={faBus} className="trip-bus-icon" />
-          <div className="arrival">
-            <p className="time">11:45 AM</p>
-            <p className="date">Sun, 24 Jan</p>
+          <div className="bus-line">
+            <FontAwesomeIcon icon={faBus} className="bus-icon" />
+          </div>
+          <div className="location">
+            <div className="code">ABJ</div>
+            <div className="time">05:00PM</div>
           </div>
         </div>
-        <div className="trip-price">
-          <p>$696</p>
-        </div>
+        <div className="operator">God Is Good Motors</div>
+        <div className="price">₦10,500 <span>Per Adult</span></div>
+        <Link to="/seat-selection"> <button className="select-seat-btn">Select Seat</button></Link>
       </div>
     </div>
   );

@@ -1,117 +1,158 @@
-/* SelectTrip.css */
-
-.select-trip-container {
-    background-color: #e5f4f4;
-    font-family: 'Arial', sans-serif;
-    color: #001f3f;
-    min-height: 100vh;
-    padding: 1rem;
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    width: 30%;
   }
   
-  .trip-header {
-    background-color: #172156;
-    color: #ffffff;
-    padding: 1.5rem;
-    border-radius: 20px 20px 0 0;
+  body, html {
+    height: 100%;
+    background-color: #b0e0e6;
+    font-family: 'Arial', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  .select-trip-page {
+    max-width: 430px; /* Typical mobile width */
+    margin: 0 auto;
+    min-height: 100vh;
+    background-color: #fff;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Top Section */
+  .top-section {
+    background-color: #0b3c5d;
+    padding: 2rem 1rem 5rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    color: white;
     text-align: center;
-    margin-bottom: 1rem;
+    position: relative;
   }
   
-  .location-header {
+  .trip-info {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.8rem;
+    gap: 1.2rem;
+    font-size: 1.1rem;
     font-weight: bold;
   }
   
-  .location-code {
-    margin: 0 0.5rem;
-  }
-  
-  .bus-icon {
-    font-size: 1.4rem;
-    color: #6fc7c2;
-  }
-  
-  .route-names {
+  .select-title {
+    margin-top: 0.8rem;
     font-size: 1rem;
-    color: #c5e4e7;
-    margin-top: 0.5rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
   }
   
-  .filters {
+  /* Control Buttons */
+  .controls {
     display: flex;
     justify-content: space-between;
-    margin: 1rem 0;
-    padding: 0 0.5rem;
+    padding: 1rem;
+    gap: 0.5rem;
   }
   
   .filter-btn,
   .sort-btn {
-    background-color: #d2f2f2;
-    color: #172156;
+    flex: 1;
+    text-align: center;
+    background-color: white;
     border: none;
-    padding: 0.6rem 1.2rem;
+    padding: 0.6rem 0;
     border-radius: 12px;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 0.9rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: 600;
+    font-size: 0.85rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
   }
   
+  /* Availability Text */
+  .available-count {
+    text-align: center;
+    font-weight: 600;
+    color: #333;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Trip Card */
   .trip-card {
-    background-color: #ffffff;
-    border-radius: 16px;
+    background-color: #1fbec640;
+    margin: 0.7rem 1rem;
+    border-radius: 18px;
     padding: 1rem;
-    margin-bottom: 1rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .card-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: transform 0.2s ease-in-out;
+    margin-bottom: 0.8rem;
   }
   
-  .trip-card:hover {
-    transform: scale(1.02);
+  .location {
+    text-align: center;
   }
   
-  .trip-times {
-    display: flex;
-    align-items: center;
-    gap: 1.2rem;
-  }
-  
-  .departure, .arrival {
-    text-align: left;
-    font-size: 0.9rem;
-    color: #172156;
+  .code {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #0b3c5d;
   }
   
   .time {
-    font-size: 1.2rem;
-    font-weight: bold;
+    font-size: 0.8rem;
+    color: #555;
   }
   
-  .date {
-    font-size: 0.75rem;
-    color: #7b9ca6;
+  .bus-line {
+    text-align: center;
   }
   
-  .trip-bus-icon {
+  .bus-icon {
     font-size: 1.4rem;
-    color: #6fc7c2;
+    color: #0b3c5d;
   }
   
-  .trip-price p {
-    font-size: 1.1rem;
+  .operator {
+    margin: 0.5rem 0 0.2rem;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #333;
+  }
+  
+  .price {
+    font-size: 1.05rem;
     font-weight: bold;
-    color: #172156;
-    margin: 0;
+    color: #0b3c5d;
+  }
+  
+  .price span {
+    font-size: 0.75rem;
+    font-weight: normal;
+    color: #888;
+  }
+  
+  /* Button */
+  .select-seat-btn {
+    width: 100%;
+    margin-top: 0.8rem;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 12px;
+    background-color: #0b3c5d;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .select-seat-btn:hover {
+    background-color: #072a40;
   }
   
