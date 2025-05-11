@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Image1 from "../../Assets/Image 1.jpg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBus } from '@fortawesome/free-solid-svg-icons';
-
+import bus_icon from "../../Assets/bus-icon.png";
 import './Home.css';
 
 const HomePage = () => {
@@ -13,7 +12,7 @@ const HomePage = () => {
       <div className="home-container">
         <div className="home-card">
           <div className="home-header">
-        <img src={Image1} alt="Travel" className="home-image" />    
+        <img src={bus_icon} alt="Travel" className="home-image" />    
             <h2>Book Your Trip</h2>
           </div>
   
