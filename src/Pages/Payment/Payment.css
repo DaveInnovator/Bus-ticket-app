@@ -1,0 +1,112 @@
+
+body {
+    background-color: #000;
+}
+.payment-page {
+    max-width: 400px;
+    margin: auto;
+    padding: 1rem;
+    font-family: 'Arial', sans-serif;
+    background-color: #0b2239;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+  
+  .back-icon,
+  .share-icon {
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+  .route-info {
+    text-align: center;
+    color:#fff;
+    margin-bottom: 1rem;
+  }
+  
+  .route {
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+  
+  .date {
+    color: #fff;
+    font-size: 0.9rem;
+  }
+  
+  .ticket-details {
+    background: #f8f8f8;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .ticket-details .row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    font-size: 0.95rem;
+  }
+  
+  .ticket-details .total {
+    font-weight: bold;
+  }
+  
+  .amount {
+    color: #e74c3c;
+  }
+  
+  .qr-section {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+  }
+  
+  .note {
+    font-size: 0.8rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .note span {
+    color: #e74c3c;
+    font-weight: bold;
+  }
+  
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  
+  .cancel-btn,
+  .download-btn {
+    flex: 1;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .cancel-btn {
+    background: #fff;
+    border: 1px solid #ccc;
+    color: #333;
+  }
+  
+  .download-btn {
+    background: #1fbec6;
+    color: white;
+  }
+  

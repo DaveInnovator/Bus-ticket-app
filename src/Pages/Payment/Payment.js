@@ -2,6 +2,7 @@ import React from "react";
 import "./Payment.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faShareAlt } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const Payment = () => {
   return (
@@ -60,8 +61,8 @@ const Payment = () => {
       </p>
 
       <div className="actions">
-        <button className="cancel-btn">Cancel</button>
-        <button className="download-btn">Download</button>
+       <Link to="/cancel-reservation"> <button className="cancel-btn">Cancel</button></Link>
+        <Link to="/receipt"><button className="download-btn">Download</button></Link>
       </div>
     </div>
   );
